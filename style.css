@@ -448,3 +448,38 @@ body {
       flex-direction: column;
     }
 }
+
+@media (max-width: 590px) {
+    .header {
+      justify-content: center;
+    }
+    .logo_img{
+      width: 61px;
+      height: 60px;
+    }
+    .logo_name {
+      font-weight: 700;
+      font-size: 16px;
+    } 
+    .nav_item {
+      font-size: 500;
+      font-size: 7px;
+      padding: 5px 15px;
+      border-radius: 10px;
+    }
+    .main_about{
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .main_my_photo {
+      width: 250px;
+      height: 250px;
+    }
+    .main_save_rez{
+      font-size: 20px;
+    }
+
+
+}
