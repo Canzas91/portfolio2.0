@@ -565,6 +565,9 @@ body {
     .skills {
       margin-bottom: 30px;
     }
+    .main_card_3 {
+      height: 680px;
+    }
     .project {
       display: flex;
       justify-content: center;
@@ -572,11 +575,16 @@ body {
       flex-direction: column;
     }
     .project1 {
-      width: 370px;
-      height: 250px;
+      width: 300px;
+      height: 150px;
     }
     .project_title {
       margin-bottom: 40px;
-
+    }
+    .footer div {
+      width: 350px;
+    }
+    .footer h3 {
+      font-size: 16px;
     }
 }
