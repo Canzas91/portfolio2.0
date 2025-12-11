@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
     <header class="header">
-        <div class="logo">
+        <div class="logo" onclick="location.href='index.html'">
             <img src="assets/Group 7.png" alt="logo" class="logo_img">
             <div class="logo_name">ALEKSANDER <br> NEMOV</div>
         </div>
         <nav class="nav">
             <ul class="nav_list">
-                <li class="nav_item">Проекты</li>
-                <li class="nav_item">Новости</li>
+                <li class="nav_item"><a class="nav_link" href="#main_card_3">Проекты</a></li>
+                <li class="nav_item"><a class="nav_link" href="news.html">Новости</a></li>
                 <li class="nav_item">Дневник</li>
-                <li class="nav_item">Контакты</li>
+                <li class="nav_item" id="">Контакты</li>
             </ul>
         </nav>
     </header>
@@ -54,10 +55,11 @@
             </div>
             <img src="./assets/nemov_img.png" alt="nemov" class="nemov">
         </div>
-        <div class="main_card_3">
+        <div class="main_card_3" id="main_card_3">
             <h2 class="project_title">ПРОЕКТЫ</h2>
             <div class="project">
                 <div onclick="location.href='https://canzas91.github.io/my--portfolio-project/'" class="project1">Первый проект</div>
+                <div onclick="location.href='https://canzas91.github.io/my-awesome-project/'" class="project1">Второй Проект</div>
                 <div onclick="location.href='https://canzas91.github.io/my-awesome-project/'" class="project1">Второй Проект</div>
             </div>
         </div>
