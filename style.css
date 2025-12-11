@@ -224,18 +224,37 @@ body {
     font-family: 'inter', sans-serif;
     background-color: var(--color-main);
 }
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  padding: .5rem 1rem;
+  background: #000;
+  color: #fff;
+  border-radius: .5rem;
+  z-index: 10000;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--color-accent);
-    
+  position: sticky;
+  top: 0;
+  padding-top: calc(1rem + env(safe-area-inset-top));
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin: 25px;
+    width: 325px;
     padding: 17px;
     gap: 15px;
     background-color: var(--color-light);
@@ -251,6 +270,10 @@ body {
     display: flex;
     align-items: center;
     margin: 25px;
+}
+.nav_link {
+    text-decoration: none;
+    color: var(--color-black);
 }
 .nav_list {
     display: flex;
@@ -282,6 +305,7 @@ body {
     border-radius: 80px;
     width: 490px;
     height: 490px;
+    background-image: url("./assets/IMG_3842.JPG");
 }
 
 .main_about {
@@ -370,23 +394,32 @@ body {
     margin-top: 20px;
 }
 .project {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 270px
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 250px;
+    gap: 150px;
+    align-items: start;
+    justify-content: start;
+    overflow-x: auto;
+    padding: 12px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
 }
 
 .project1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  height: 550px;
+  width: 250px;
+  height: 400px;
+  padding: 16px;
   border: var(--color-main) solid 1px;
-  border-radius: 30px;
+  border-radius: 16px;
   background-color: var(--color-accent);
   color: var(--color-light);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
+  text-align: center;
 }
 .footer {
     background-color: var(--color-accent);
@@ -415,6 +448,7 @@ body {
 
 @media (max-width: 1400px){
     .main_my_photo {
+
         width: 400px;
         height: 400px;
     }
@@ -433,6 +467,7 @@ body {
     .main_my_photo {
         width: 350px;
         height: 350px;
+        background-image: url("./assets/IMG_3842.JPG");
     }
     .main_about {
         margin-bottom: 30px;
@@ -462,7 +497,19 @@ body {
       margin-top: 20px;
     }
     .project {
-      gap:150px;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 250px;
+      gap: 20px;
+      align-items: start;
+      justify-content: start;
+      overflow-x: auto;
+      padding: 8px 12px;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+    }
+    .project1 {
+      scroll-snap-align: start;
     }
 }
 
@@ -470,6 +517,7 @@ body {
     .header {
         flex-wrap: wrap;
         margin: 0px;
+        justify-content: center;
     }
     .main_my_photo {
         width: 350px;
@@ -520,15 +568,21 @@ body {
       margin-bottom: 30px;
     }
     .project {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 250px;
+      gap: 16px;
+      align-items: start;
+      justify-content: start;
+      overflow-x: auto;
+      padding: 8px 12px;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
     }
     .project1 {
-      width: 500px;
-      height: 150px;
-      gap:70px;
+      width: 250px;
+      height: 400px;
+      scroll-snap-align: start;
     }
     .project_title {
       margin-bottom: 40px;
